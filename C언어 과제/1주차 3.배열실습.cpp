@@ -23,16 +23,16 @@ int main()
 
 		max = number[0];
 		min = number[0];
-		for (int i = 0; i < SIZE; i++) {
+		for (int i = 1; i < SIZE; i++) {
 			if (max < number[i]) max = number[i];
 			if (min > number[i]) min = number[i];
 		}
 		printf("avg = %f, max = %d, min = %d\n", avg,max, min);
 	    return 0;
 }
-// %3d %d ¾Õ¿¡ ¼ýÀÚ°¡ ºÙÀ¸¸é ¿¹¸¦ µé¾î 3ÀÌ¸é ¼¼ ÀÚ¸® Æ÷¸Ë(ÀÏÁ¤ÇÑ Çü½Ä)À¸·Î Âï´Â °ÍÀÌ´Ù. [¿À¸¥ÂÊ Á¤·Ä·Î Âï±â!]
-// -3d¸é ¿ÞÂÊ¿¡¼­ºÎÅÍ Âï´Â °ÍÀÌ´Ù Áï ¿ÞÂÊ Á¤·Ä
-// \t(¿ª½½·¡½Ã Áï ÅÇt ¶ó°í ºÎ¸¥´Ù) : ÅÇt¸¸Å­ °ø¹éÀÌ ¶³¾îÁö´Â °ÍÀ» ÀÇ¹ÌÇÑ´Ù. 
-// Æò±ÕÀ» ±¸ÇÏ±â À§ÇØ¼­´Â float Çü½ÄÀ¸·Î avg(Æò±Õ) º¯¼ö°¡ ÀÖ¾î¾ß ÇÑ´Ù.
-// floatÀ¸·Î µé¾î°¡°Ô ÇÒ·Á¸é Á¤¼ö ³ª´©±â Á¤¼ö¸¦ ÇÏ´Â °ÍÀÌ ¾Æ´Ï¶ó Á¤¼ö ³ª´©±â ¼Ò¼öÁ¡À¸·Î ½áÁà¾ß ÇÑ´Ù.
-// totalÀ» ¸í½ÃÀûÀ¸·Î floatÀ¸·Î Ãë±ÞÇÏ¶ó°í ÇÑ °æ¿ì (float)total ÀÌ·±½ÄÀ¸·Î ½áÁà¾ß ÇÑ´Ù. = Çüº¯È¯ÀÌ¶ó°íµµ ÇÑ´Ù.   
+// %3d %d ì•žì— ìˆ«ìžê°€ ë¶™ìœ¼ë©´ ì˜ˆë¥¼ ë“¤ì–´ 3ì´ë©´ ì„¸ ìžë¦¬ í¬ë§·(ì¼ì •í•œ í˜•ì‹)ìœ¼ë¡œ ì°ëŠ” ê²ƒì´ë‹¤. [ì˜¤ë¥¸ìª½ ì •ë ¬ë¡œ ì°ê¸°!]
+// -3dë©´ ì™¼ìª½ì—ì„œë¶€í„° ì°ëŠ” ê²ƒì´ë‹¤ ì¦‰ ì™¼ìª½ ì •ë ¬
+// \t(ì—­ìŠ¬ëž˜ì‹œ ì¦‰ íƒ­t ë¼ê³  ë¶€ë¥¸ë‹¤) : íƒ­të§Œí¼ ê³µë°±ì´ ë–¨ì–´ì§€ëŠ” ê²ƒì„ ì˜ë¯¸í•œë‹¤. 
+// í‰ê· ì„ êµ¬í•˜ê¸° ìœ„í•´ì„œëŠ” float í˜•ì‹ìœ¼ë¡œ avg(í‰ê· ) ë³€ìˆ˜ê°€ ìžˆì–´ì•¼ í•œë‹¤.
+// floatìœ¼ë¡œ ë“¤ì–´ê°€ê²Œ í• ë ¤ë©´ ì •ìˆ˜ ë‚˜ëˆ„ê¸° ì •ìˆ˜ë¥¼ í•˜ëŠ” ê²ƒì´ ì•„ë‹ˆë¼ ì •ìˆ˜ ë‚˜ëˆ„ê¸° ì†Œìˆ˜ì ìœ¼ë¡œ ì¨ì¤˜ì•¼ í•œë‹¤.
+// totalì„ ëª…ì‹œì ìœ¼ë¡œ floatìœ¼ë¡œ ì·¨ê¸‰í•˜ë¼ê³  í•œ ê²½ìš° (float)total ì´ëŸ°ì‹ìœ¼ë¡œ ì¨ì¤˜ì•¼ í•œë‹¤. = í˜•ë³€í™˜ì´ë¼ê³ ë„ í•œë‹¤.   
