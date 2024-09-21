@@ -13,9 +13,9 @@ int main() {
 	return 0;
 }
 
-//¹®ÀÚ¿Í ¹®ÀÚ¿­ÀÇ ÀÔÃâ·ÂÀ» À§ÇÑ ÇÔ¼ö°¡ º°µµ·Î Á¸ÀçÇÑ´Ù.
-// ¹®ÀÚ Àü¿ë ÀÔ·Â°ú Ãâ·Â ÇÔ¼ö°¡ ÀÖ´Ù.
-// stdio.h Çì´õÆÄÀÏ¿¡´Â 2°³ÀÇ ÇÔ¼ö°¡ Á¸ÀçÇÑ´Ù.
-// 1¹øÂ° : int getchar(void); Å°º¸µå ¿¡¼­ ¹®ÀÚ 1°³¸¦ ÀÔ·Â¹Þ¾Æ ¹ÝÈ¯
-// 2¹øÂ° : int putchar(int ch);  ch·Î ¹ÞÀº ¹®ÀÚ¸¦ È­¸é¿¡ Ãâ·Â, ÇØ´ç ¹®ÀÚ ¹ÝÈ¯
-// getchar() : ¿£ÅÍÅ° ÀÔ·Â½Ã Á¾·áÇÑ´Ù. 
+//ë¬¸ìžì™€ ë¬¸ìžì—´ì˜ ìž…ì¶œë ¥ì„ ìœ„í•œ í•¨ìˆ˜ê°€ ë³„ë„ë¡œ ì¡´ìž¬í•œë‹¤.
+// ë¬¸ìž ì „ìš© ìž…ë ¥ê³¼ ì¶œë ¥ í•¨ìˆ˜ê°€ ìžˆë‹¤.
+// stdio.h í—¤ë”íŒŒì¼ì—ëŠ” 2ê°œì˜ í•¨ìˆ˜ê°€ ì¡´ìž¬í•œë‹¤.
+// 1ë²ˆì§¸ : int getchar(void); í‚¤ë³´ë“œ ì—ì„œ ë¬¸ìž 1ê°œë¥¼ ìž…ë ¥ë°›ì•„ ë°˜í™˜
+// 2ë²ˆì§¸ : int putchar(int ch);  chë¡œ ë°›ì€ ë¬¸ìžë¥¼ í™”ë©´ì— ì¶œë ¥, í•´ë‹¹ ë¬¸ìž ë°˜í™˜
+// getchar() : ì—”í„°í‚¤ ìž…ë ¥ì‹œ ì¢…ë£Œí•œë‹¤. 
