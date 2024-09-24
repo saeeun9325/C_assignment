@@ -18,7 +18,7 @@ int main()
 		}
 		i++;
 	}
-	printf("�Է¹��ڿ� : %s", input);
-	for (int i = 0; i < 26; i++)  printf("%c �⿬Ƚ�� : %d\n", 'a' + i, count[i]);
+	printf("ÀÔ·Â¹®ÀÚ¿­ : %s", input);
+	for (int i = 0; i < 26; i++)  printf("%c Ãâ¿¬È½¼ö : %d\n", 'a' + i, count[i]);
 	return 0;
 }
