@@ -3,23 +3,20 @@
 
 #define MAX_PRODUCTS 100
 
-typedef struct {
-    char name[50];
-    int stock_in;
-    int sales;
-    int stock;
-} Product;
-
-Product products[MAX_PRODUCTS];
-int product_count = 0;
+// 상품 정보를 저장할 배열
+char product_names[MAX_PRODUCTS][50]; // 상품명
+int stock_in[MAX_PRODUCTS]; // 입고수량
+int sales[MAX_PRODUCTS]; // 판매수량
+int stock[MAX_PRODUCTS]; // 재고수량
+int product_count = 0; // 현재 상품 수
 
 void add_product() {
     if (product_count < MAX_PRODUCTS) {
         printf("상품명을 입력하세요: ");
-        scanf("%s", products[product_count].name);
-        products[product_count].stock_in = 0;
-        products[product_count].sales = 0;
-        products[product_count].stock = 0;
+        scanf("%s", product_names[product_count]);
+        stock_in[product_count] = 0; // 초기 입고수량
+        sales[product_count] = 0; // 초기 판매수량
+        stock[product_count] = 0; // 초기 재고수량
         product_count++;
         printf("상품이 추가되었습니다.\n");
     } else {
@@ -31,7 +28,7 @@ void view_products() {
     printf("\n상품 현황:\n");
     for (int i = 0; i < product_count; i++) {
         printf("상품명: %s, 입고수량: %d, 판매수량: %d, 재고수량: %d\n",
-               products[i].name, products[i].stock_in, products[i].sales, products[i].stock);
+               product_names[i], stock_in[i], sales[i], stock[i]);
     }
 }
 
