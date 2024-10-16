@@ -1,30 +1,31 @@
 #include <stdio.h>
-#include <string.h>
-
 
 int main() {
-    char input [200] = "";
-    int count[26] = {0};
-    int ch;
-    int i = 0;
-    
-    while ((ch = getchar()) != EOF) {
-        input[i++] = ch;
+    char input[200] = "";  // 최대 199자 문자열을 저장할 배열, 처음에 빈 문자열로 초기화함.
+    int count[26] = { 0 }; // 알파벳 소문자의 출현 횟수를 저장할 배열, 모두 0으로 초기화
+    int ch;  // 입력받은 문자를 저장할 변수
+    int i = 0; //인덱스 변수
+
+    while ((ch = getchar()) != EOF) { //getchar(): 사용자로부터 문자를 하나씩 입력받음.
+        input[i++] = ch; //입력받은 문자를 input 배열에 저장하고, 인덱스를 증가
     }
+    //EOF: 파일의 끝을 나타내는 상수로, 입력이 끝나면 루프를 종료함.
+
+    i = 0; // 인덱스를 0으로 초기화
     
-    i=0;
-    
-    while (input[i] != '\0') {
-        if(input[i] >= 'a' && input[i] <= 'z') {
-            count[input[i] - 'a']++;
+    //알파벳 소문자 출현 횟수 세기
+    while (input[i] != '\0') {  //배열의 각 문자 탐색,  '\0'은 문자열의 끝을 나타냄.
+        if (input[i] >= 'a' && input[i] <= 'z') { //현재 문자가 소문자 a부터 z까지인지 확인함.
+            count[input[i] - 'a']++; //문자 위치를 계산해서 출현 수를 1증가 시킴.
         }
-        i++;
+        i++; //다음 문자로 이동
     }
-    printf("입력 문자열: %s\n", input);
-    
+    printf("입력 문자열: %s\n", input); 
+
+    //알파벳 출현 횟수 출력
     for (int i = 0; i < 26; i++) {
-        printf("%c 출현횟수 = %d\n" , 'a' + i, count[i]);
+        printf("%c 출현횟수 = %d\n", 'a' + i, count[i]);
     }
-    
+
     return 0;
 }
