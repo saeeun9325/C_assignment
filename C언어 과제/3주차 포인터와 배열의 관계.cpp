@@ -1,34 +1,33 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #define SIZE 100
 
-void inputRandomArray(int array[ ], int size) {
-	for (int i = 0; i < size; i++) {
-		*(array + i) = rand() % 100;
-	}
-}
-void printArray(int* array, int size)
-{
-	for (int i = 0; i < size - 1; i++) {
-		printf("%3d\t", *(array + 1)); 
-		if ((i + 1) % 10 == 0) printf("\n");
-	}
-}
-int main()
-{
-	int number[SIZE];
-	
-	srand(time(NULL));
-	inputRandomArray(number, SIZE);
-	printArray(number, SIZE);
-
-
-	return 0;
+void inputRandomArray(int* array, int size) {
+    for (int i = 0; i < size; i++) {
+        *(array + i) = rand() % 100;
+    }
 }
 
-// ÁÖ¼Ò°ª¿¡ +, - ¿¬»êÀÌ °¡´ÉÇÔ
-// ¾î¶² ÀÚ·áÇüÀÇ ÁÖ¼Ò¸¦ °¡Áö°í ÀÖ´Â°¡¿¡ µû¶ó °á°ú°¡ ´Þ¶óÁü[Á¤¼öÇüÀº +4, ¹®ÀÚ´Â +1ÀÌ ´õÇØÁø´Ù
-// Æ÷ÀÎÅÍ ¿¬»êÀº µ¡¼À°ú »¬¼À¸¸ °¡´ÉÇÏ´Ù(´ÙÀ½¹øÁö, ÀÌ¹ø¹øÁöÀÇ °³³äÀ¸·Î Ã³¸®ÇÏ±â ¶§¹®ÀÌ´Ù)
-// int* array ¿Í int array[ ] °°´Ù.
-//*(array+1)¸¦ array[i]·Î ¹Ù²Ü ¼ö ÀÖ´Ù.
+void printArray(int* array, int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%3d\t", *(array + i));
+        if ((i + 1) % 10 == 0) printf("\n");
+    }
+}
+
+int main() {
+    int number[SIZE];
+
+    srand(time(NULL));
+    inputRandomArray(number, SIZE);
+    printArray(number, SIZE);
+
+    return 0;
+}
+
+// ì£¼ì†Œê°’ì— +, - ì—°ì‚°ì´ ê°€ëŠ¥í•¨
+// ì–´ë–¤ ìžë£Œí˜•ì˜ ì£¼ì†Œë¥¼ ê°€ì§€ê³  ìžˆëŠ”ê°€ì— ë”°ë¼ ê²°ê³¼ê°€ ë‹¬ë¼ì§[ì •ìˆ˜í˜•ì€ +4, ë¬¸ìžëŠ” +1ì´ ë”í•´ì§„ë‹¤
+// í¬ì¸í„° ì—°ì‚°ì€ ë§ì…ˆê³¼ ëº„ì…ˆë§Œ ê°€ëŠ¥í•˜ë‹¤(ë‹¤ìŒë²ˆì§€, ì´ë²ˆë²ˆì§€ì˜ ê°œë…ìœ¼ë¡œ ì²˜ë¦¬í•˜ê¸° ë•Œë¬¸ì´ë‹¤)
+// int* array ì™€ int array[ ] ê°™ë‹¤.
+//*(array+1)ë¥¼ array[i]ë¡œ ë°”ê¿€ ìˆ˜ ìžˆë‹¤.
