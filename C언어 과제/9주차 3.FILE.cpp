@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int getline(char* line, int size) {
+int getline(char* line) {
     int ch;
     int i = 0;
     while((ch = getchar()) != '\n') line[i++] = ch;
