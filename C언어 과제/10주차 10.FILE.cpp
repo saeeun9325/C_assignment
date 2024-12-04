@@ -52,16 +52,19 @@ int main() {
     printPoints(p, 10);
 
     fp = fopen("struct.bin", "rb");
-    if(fp == NULL) exit(-1);
-    fseek(fp, sizeof(POINT)*3, SEEK_SET);
+    if (fp == NULL) exit(-1);                          // SEEK_SET 파일의 시작
+    fseek(fp, sizeof(POINT) * 3, SEEK_SET);            // fseek --> stream에서 위치 찾아 파일 위치지정자(파일읽거나쓸위치)를 그곳으로 옮겨놓는 함수
     pi = ftell(fp);
     printf("pi = %d");
-    fread(&p2, sizeof(POINT), 1, fp);
+    fread(&p2, sizeof(POINT), 1, fp);                    // fseek(찾아서)--> fread(읽고)--> printf(출력)
     printf("p2 -> x : %d, p2 -> y : %d\n", p2.x, p2.y);
-    fseek(fp, sizeof(POINT)*-2, SEEK_END);
+    fseek(fp, sizeof(POINT) * -2, SEEK_END);                  //-2 인덱스처럼 뒤에서 두번째거
     printf("pi = %d\n", ftell(fp));
     fread(&p2, sizeof(POINT), 1, fp);
     printf("p2 -> x : %d, p2 -> y : %d\n", p2.x, p2.y);
     fclose(fp);
     return 0;
 }
+
+// ftell --> 이진 스트림의 위치 지정자 현재 위치값을 반환한다(바이트 단위)
+// 현재 위치를 알고 싶을 때, 파일의 크기를 알고 싶을 때 사용
