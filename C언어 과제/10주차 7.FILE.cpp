@@ -4,6 +4,7 @@
 int main() {
     char input[SIZE];   //크기가 100인 문자 배열 선언
     FILE* fp = NULL;    //FILE 포인터를 NULL로 초기화, 이 포인터는 파일 열고 쓰고 닫는데 사용
+    //NULL:값이 없다. 정의되지 않은 상태 / 아직 값이 입력되지 않았거나 알 수 없는 값, 데이터가 존재하지 않음을 나타낼 때 사용
 
     if ((fp = fopen("output.bin", "wb")) == NULL) {     //파일 열 수 없으면 fopen은 NULL반환 후   //bin = 바이너리, 쓰기 모드는 텍스트에서 w인데 바이너리라서 wb
         printf("error...");                             //파일 열기에 실패한 경우 error메시지 출력    
